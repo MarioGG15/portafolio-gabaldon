@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 300px){
+
+    .navbar{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: .5rem .5rem;
+        height: 80px;
+    }
+    
+    #btn-menu{
+        display: none;
+    }
+    
+    .navbar-menu{
+        background-color: #f9f5f2;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: -100%;
+        height: calc(100vh - 80px);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: left .4s linear;
+    }
+    
+    .navbar-item{
+        list-style: none;
+        padding: 0.25rem 1rem;
+    }
+
+    .navbar-item:hover{
+        cursor: pointer;
+        border-bottom: 0.5px solid #8e7bef;
+    }
+
+    a{
+        color: #222222;
+        text-decoration: none;
+        font-family: Inter;
+        font-size: 16px;
+    }
+
+    a:hover{
+        color: #8e7bef;
+        font-weight: 600;
+    }
+    
+    #btn-menu:checked ~ .navbar-menu{
+        left: 0;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .header-info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .info-personal{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .info-personal > h1{
+        font-size: 50px;
+        font-family: Inter;
+        font-weight: 600;
+        color: #222222;
+    }
+    
+    .info-personal > h4{
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        color: #423f40;
+    }
+    
+    .info-personal > h5{
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 400;
+        color: #8e7bef;
+    }
+    
+    .social-media{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .linkedin, .instagram, .twitter{
+        background-color: #8e7bef;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .personal-contact{
+        background-color: #8e7bef;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        width: 207px;
+        margin: 0 auto;
+        padding: .5rem 0;
+    }
+
+    .personal-contact > a{
+        color: #f9f5f2;
+        text-decoration: none;
+        font-family: Inter;
+        font-size: 16px;
+    }
+
+    .personal-contact> a:hover{
+        font-weight: 600;
+        border-bottom: 0.5px solid #f9f5f2;
+    }
+    
+    .info-photo{
+        padding-bottom: 2rem;
+    }
+    
+    .experience-skills-container{
+        background-color: #fcda68;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .experience-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .experience-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 .5rem;
+    }
+    
+    .experience-details > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding: 1rem 0;
+    }
+    
+    .experience-details > h5{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+        padding: 1rem 0;
+    }
+    
+    .experience-dates{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 .5rem;
+    }
+    
+    .experience-dates > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+    }
+    
+    .experience-table{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .first-job, .second-job, .third-job{
+        display: flex;
+        justify-content: start;
+        gap: 1rem;
+        width: 100%;
+        padding: .5rem 0;
+    }
+    
+    .first-job, .second-job{
+        border-bottom: 2px solid #423f40;
+    }
+    
+    .years{
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+    }
+    
+    .position-place > h6{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #222222;
+    }
+    
+    .position-place > p{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+    }
+    
+    .skills-info{
+        padding: 0 .5rem;
+    }
+    
+    .skills-info > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+        padding: 2rem 0;
+    }
+    
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-mobile, .skill-motion, .skill-creation, .skill-management{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .icons-footer{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+        text-align: center;
+    }
+    
+    .portafolio > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding: 2rem .5rem 1rem .5rem;
+    }
+    
+    .apps-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hotel-app > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: .5rem 1rem;
+    }
+    
+    .beauty-app, .training-app > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: .5rem 1rem;
+    }
+    
+    .contact-footer{
+        padding: 2rem .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-footer > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-info-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+    .phone-data, .email-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: .5rem;
+    }
+    
+    .phone-icon, .email-icon{
+        background-color: #f9f5f2;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+    
+    .phone-data, .email-data > h4{
+        font-family: Inter;
+        color: #222222;
+    }
+    
+    .phone-data, .email-data > h6{
+        font-family: Inter;
+        color: #423f40;
+    }
+    
+    .contact-footer > h6{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (min-width: 600px){
+    label{
+        display: none;
+    }
+
+    .navbar-menu{
+        position: static;
+        max-height: 80px;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    .navbar-item{
+        gap: 1.5rem;
+    }
+
+    .navbar{
+        background-color: #f9f5f2;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar-menu{
+        display: flex;
+    }
+    
+    .navbar-item{
+        list-style: none;
+        padding: 0.25rem 1rem;
+    }
+
+    .navbar-item:hover{
+        cursor: pointer;
+        border-bottom: 0.5px solid #8e7bef;
+    }
+
+    a{
+        color: #222222;
+        text-decoration: none;
+        font-family: Inter;
+        font-size: 16px;
+    }
+
+    a:hover{
+        color: #8e7bef;
+        font-weight: 600;
+    }
+
+    .header-info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 3rem 5rem;
+    }
+    
+    .info-personal{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .info-personal > h1{
+        font-size: 50px;
+        font-weight: 600;
+        font-family: Inter;
+        color: #222222;
+        text-align: start;
+    }
+    
+    .info-personal > h4{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Inter;
+        color: #423f40;
+        text-align: start;
+    }
+    
+    .info-personal > h5{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Inter;
+        color: #8e7bef;
+    }
+    
+    .social-media{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .linkedin, .instagram, .twitter{
+        background-color: #8e7bef;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .personal-contact{
+        background-color: #8e7bef;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        width: 207px;
+        padding: .5rem 0;
+        margin: 0;
+    }
+
+    .personal-contact > a{
+        color: #f9f5f2;
+        text-decoration: none;
+        font-family: Inter;
+        font-size: 16px;
+    }
+
+    .personal-contact> a:hover{
+        font-weight: 600;
+        border-bottom: 0.5px solid #f9f5f2;
+    }
+    
+    .info-photo{
+        padding-bottom: 2rem;
+    }
+    
+    .experience-skills-container{
+        background-color: #fcda68;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .experience-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .experience-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 .5rem;
+    }
+    
+    .experience-details > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding: 1rem 0;
+    }
+    
+    .experience-details > h5{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+        padding: 1rem 0;
+    }
+    
+    .experience-dates{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2rem .5rem;
+    }
+    
+    .experience-dates > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+    }
+    
+    .experience-table{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .first-job, .second-job, .third-job{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: .5rem 0;
+    }
+    
+    .first-job, .second-job{
+        border-bottom: 2px solid #423f40;
+    }
+    
+    .years{
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+    }
+    
+    .position-place > h6{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #222222;
+    }
+    
+    .position-place > p{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #423f40;
+    }
+    
+    .skills-info{
+        padding: 0 .5rem;
+    }
+    
+    .skills-info > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+        padding: 2rem 3rem;
+    }
+    
+    .skills-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .skill-mobile, .skill-motion, .skill-creation, .skill-management{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .icons-footer{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222222;
+        text-align: center;
+    }
+    
+    .portafolio > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding: 2rem .5rem 1rem .5rem;
+    }
+    
+    .apps-container{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    
+    .hotel-app > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: .5rem 1rem;
+    }
+    
+    .training-app > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: .5rem 1rem;
+    }
+
+    .beauty-app > h4{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: .5rem 1rem;
+    }
+    
+    .contact-footer{
+        padding: 2rem .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .contact-footer > h2{
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-info-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+    .phone-data, .email-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: .5rem;
+    }
+    
+    .phone-icon, .email-icon{
+        background-color: #f9f5f2;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+    }
+    
+    .phone-data, .email-data > h4{
+        font-family: Inter;
+        color: #222222;
+    }
+    
+    .phone-data, .email-data > h6{
+        font-family: Inter;
+        color: #423f40;
+    }
+    
+    .contact-footer > h6{
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        color: #8e7bef;
+        padding: 2rem 0;
+        margin: 0 auto;
+    }
+}
